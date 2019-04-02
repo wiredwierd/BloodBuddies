@@ -10,13 +10,14 @@ public class Userinfo {
     public String gender;
     public String mImageUrl;
     public String userid;
+    public String verified;
 
 
     public Userinfo() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public Userinfo(String userid,String name1, String name2,String name3,String email,String phone,String bldgrp,String gender,String mImageUrl) {
+    public Userinfo(String userid,String name1, String name2,String name3,String email,String phone,String bldgrp,String gender,String mImageUrl, String verified) {
         this.userid=userid;
         this.name1 = name1;
         this.name2 = name2;
@@ -26,6 +27,7 @@ public class Userinfo {
         this.bldgrp=bldgrp;
         this.gender=gender;
         this.mImageUrl=mImageUrl;
+        this.verified=verified;
     }
 
     public String getUserid() {
@@ -84,4 +86,5 @@ public class Userinfo {
     public void setGender(String name){
         gender=name;
     }
+    public String getVerified() {return verified;}//TODO : verified token. need to reflect in app ui
 }

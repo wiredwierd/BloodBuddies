@@ -293,7 +293,7 @@ public class Signner extends AppCompatActivity implements OnMapReadyCallback, Go
                 fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        Userinfo user = new Userinfo(userId,namer1.getText().toString(), namer2.getText().toString(), namer3.getText().toString(), emailer1.getText().toString(), phone.getText().toString(), s.getSelectedItem().toString(), gender, uri.toString());
+                        Userinfo user = new Userinfo(userId,namer1.getText().toString(), namer2.getText().toString(), namer3.getText().toString(), emailer1.getText().toString(), phone.getText().toString(), s.getSelectedItem().toString(), gender, uri.toString(),"false");
                         GeoHash geoHash = new GeoHash(new GeoLocation(finalLocation.latitude, finalLocation.longitude));
                         Map<String, Object> updates = new HashMap<>();
                         updates.put("users/" +  userId, user);
